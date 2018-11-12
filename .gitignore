@@ -1,3 +1,8 @@
 .idea
 cmake-build-debug
+CMakeFiles
 *.o
+*.cmake
+CMakeCache.txt
+Makefile
+libblackcomb.a
