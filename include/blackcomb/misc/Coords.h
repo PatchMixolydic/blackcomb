@@ -17,15 +17,15 @@ struct UVRect {
 
 struct Point2i;
 
-struct Point2 {
-    bool operator==(const Point2& other) const;
+struct Point2f {
+    bool operator==(const Point2f& other) const;
     bool operator==(const Point2i& other) const;
     float x;
     float y;
 };
 
 struct Point2i {
-    bool operator==(const Point2& other) const;
+    bool operator==(const Point2f& other) const;
     bool operator==(const Point2i& other) const;
     int x;
     int y;
@@ -33,8 +33,8 @@ struct Point2i {
 
 struct Point3i;
 
-struct Point3 {
-    bool operator==(const Point3& other) const;
+struct Point3f {
+    bool operator==(const Point3f& other) const;
     bool operator==(const Point3i& other) const;
     float x;
     float y;
@@ -42,7 +42,7 @@ struct Point3 {
 };
 
 struct Point3i {
-    bool operator==(const Point3& other) const;
+    bool operator==(const Point3f& other) const;
     bool operator==(const Point3i& other) const;
     int x;
     int y;
@@ -59,8 +59,8 @@ struct Color {
 
 namespace std {
     template <>
-    struct hash<Point3> {
-        std::size_t operator()(const Point3& k) const {
+    struct hash<Point3f> {
+        std::size_t operator()(const Point3f& k) const {
             return ((hash<float>()(k.x) ^ (hash<float>()(k.y) << 1)) >> 1) ^ (hash<float>()(k.z) << 1);
         }
     };

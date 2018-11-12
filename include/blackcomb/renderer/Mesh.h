@@ -6,7 +6,7 @@
 #include "../misc/Coords.h"
 
 struct Vertex {
-    Point3 pos;
+    Point3f pos;
     Color color;
     UVCoord uv;
 };

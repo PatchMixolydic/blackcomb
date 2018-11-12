@@ -9,15 +9,15 @@ bool UVRect::operator==(const UVRect &other) const {
     return botLeft == other.botLeft && topRight == other.topRight;
 }
 
-bool Point2::operator==(const Point2 &other) const {
+bool Point2f::operator==(const Point2f &other) const {
     return x == other.x && y == other.y;
 }
 
-bool Point2::operator==(const Point2i &other) const {
+bool Point2f::operator==(const Point2i &other) const {
     return x == other.x && y == other.y;
 }
 
-bool Point2i::operator==(const Point2 &other) const {
+bool Point2i::operator==(const Point2f &other) const {
     return x == other.x && y == other.y;
 }
 
@@ -25,11 +25,11 @@ bool Point2i::operator==(const Point2i &other) const {
     return x == other.x && y == other.y;
 }
 
-bool Point3::operator==(const Point3 &other) const {
+bool Point3f::operator==(const Point3f &other) const {
     return x == other.x && y == other.y && z == other.z;
 }
 
-bool Point3::operator==(const Point3i &other) const {
+bool Point3f::operator==(const Point3i &other) const {
     return x == other.x && y == other.y && z == other.z;
 }
 
@@ -37,7 +37,7 @@ bool Point3i::operator==(const Point3i &other) const {
     return x == other.x && y == other.y && z == other.z;
 }
 
-bool Point3i::operator==(const Point3 &other) const {
+bool Point3i::operator==(const Point3f &other) const {
     return x == other.x && y == other.y && z == other.z;
 }
 
