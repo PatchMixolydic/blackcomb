@@ -4,21 +4,29 @@
 #include <functional>
 
 struct UVCoord {
+    bool operator==(const UVCoord& other) const;
     float u;
     float v;
 };
 
 struct UVRect {
+    bool operator==(const UVRect& other) const;
     UVCoord botLeft;
     UVCoord topRight;
 };
 
+struct Point2i;
+
 struct Point2 {
+    bool operator==(const Point2& other) const;
+    bool operator==(const Point2i& other) const;
     float x;
     float y;
 };
 
 struct Point2i {
+    bool operator==(const Point2& other) const;
+    bool operator==(const Point2i& other) const;
     int x;
     int y;
 };
@@ -26,24 +34,23 @@ struct Point2i {
 struct Point3i;
 
 struct Point3 {
+    bool operator==(const Point3& other) const;
+    bool operator==(const Point3i& other) const;
     float x;
     float y;
     float z;
-
-    bool operator==(const Point3& other) const;
-    bool operator==(const Point3i& other) const;
 };
 
 struct Point3i {
+    bool operator==(const Point3& other) const;
+    bool operator==(const Point3i& other) const;
     int x;
     int y;
     int z;
-
-    bool operator==(const Point3& other) const;
-    bool operator==(const Point3i& other) const;
 };
 
 struct Color {
+    bool operator==(const Color& other) const;
     int r;
     int g;
     int b;
