@@ -1,6 +1,3 @@
-
-#include <blackcomb/misc/Coords.h>
-
 #include "../../include/blackcomb/misc/Coords.h"
 
 
