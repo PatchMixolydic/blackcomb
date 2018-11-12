@@ -52,3 +52,7 @@ Point2i Window::getDims() {
     glfwGetWindowSize(handle, &width, &height);
     return {width, height};
 }
+
+void Window::setFramebufferSizeCallback(GLFWframebuffersizefun fbSizeCallback) {
+    glfwSetFramebufferSizeCallback(handle, fbSizeCallback);
+}

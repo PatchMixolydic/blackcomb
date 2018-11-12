@@ -19,6 +19,7 @@ public:
     void makeContextCurrent();
     GLFWwindow* getHandle();
     Point2i getDims();
+    void setFramebufferSizeCallback(GLFWframebuffersizefun fbSizeCallback);
 private:
     GLFWwindow* handle;
 };
