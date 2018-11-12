@@ -3,9 +3,9 @@ project(blackcomb)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(GLAD_DIRECTORY "/usr/local/src")
-set(GLFW_INC_DIRECTORY "/usr/include")
-set(STB_DIRECTORY "/usr/local/include")
+set(GLAD_DIRECTORY "/usr/local/src" CACHE FILEPATH "glad.c's directory")
+set(GLFW_INC_DIRECTORY "/usr/include" CACHE FILEPATH "GLFW's include directory")
+set(STB_DIRECTORY "/usr/local/include" CACHE FILEPATH "stb_image.h's directory")
 
 include_directories(${GLFW_INC_DIRECTORY}/GLFW ${STB_DIRECTORY})
 
