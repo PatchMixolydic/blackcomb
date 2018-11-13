@@ -1,4 +1,4 @@
-#include "../../include/blackcomb/misc/BlackcombUtils.h"
+#include <blackcomb/misc/BlackcombUtils.h>
 
 template<typename Key, typename Value>
 Value BlackcombUtils::getValOrDefault(std::unordered_map<Key, Value> map, Key key, Value defaultVal) {

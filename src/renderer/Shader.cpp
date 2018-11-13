@@ -2,8 +2,8 @@
 #include <iostream>
 #include <sstream>
 #include <assert.h>
-#include "../../include/blackcomb/renderer/Shader.h"
-#include "../../include/blackcomb/misc/EngineException.h"
+#include <blackcomb/renderer/Shader.h>
+#include <blackcomb/misc/EngineException.h>
 
 Shader::Shader(std::string vertexFilename, std::string fragmentFilename) {
     GLuint vertexShader = loadAndCompileShader(GL_VERTEX_SHADER, vertexFilename);

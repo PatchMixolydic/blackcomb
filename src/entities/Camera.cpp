@@ -1,6 +1,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include "../../include/blackcomb/entities/Camera.h"
+#include <blackcomb/entities/Camera.h>
 
 void Camera::loadViewMatrix(Shader shader) {
     glm::mat4 view(1.0f);

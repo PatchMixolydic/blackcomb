@@ -1,6 +1,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <iostream>
-#include "../../include/blackcomb/entities/Entity.h"
+#include <blackcomb/entities/Entity.h>
 
 Entity::Entity() {
     updateTransMat();

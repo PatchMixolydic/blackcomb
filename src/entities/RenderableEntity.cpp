@@ -1,5 +1,5 @@
 #include <glm/gtc/type_ptr.hpp>
-#include "../../include/blackcomb/entities/RenderableEntity.h"
+#include <blackcomb/entities/RenderableEntity.h>
 
 RenderableEntity::RenderableEntity(Model& model) : model(model) {}
 
