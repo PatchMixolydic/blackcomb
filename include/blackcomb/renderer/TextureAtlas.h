@@ -5,6 +5,9 @@
 #include "Texture.h"
 #include "../misc/Coords.h"
 
+/**
+ * Handles looking up textures within a texture atlas.
+ */
 class TextureAtlas {
 public:
     TextureAtlas(std::string textureFilename, int textureWidth, int textureHeight);

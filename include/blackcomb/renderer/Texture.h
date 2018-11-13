@@ -5,6 +5,9 @@
 
 constexpr char MissingTextureFilename[] = "res/maps/unknown.png";
 
+/**
+ * Loads and stores a texture.
+ */
 class Texture {
 public:
     Texture(const char* filename);

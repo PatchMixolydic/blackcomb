@@ -7,6 +7,9 @@
 const unsigned int DefaultWidth = 800;
 const unsigned int DefaultHeight = 600;
 
+/**
+ * Convenience abstraction for many of glfw's window-related functions.
+ */
 class Window {
 public:
     Window(const char* name);

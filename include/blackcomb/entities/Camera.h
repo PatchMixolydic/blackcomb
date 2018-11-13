@@ -5,6 +5,9 @@
 #include "../renderer/Shader.h"
 #include "../renderer/Window.h"
 
+/**
+ * A repositionable camera entity.
+ */
 class Camera : public Entity {
 public:
     virtual void loadViewMatrix(Shader shader);

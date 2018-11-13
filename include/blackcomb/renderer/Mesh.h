@@ -5,12 +5,18 @@
 #include <vector>
 #include "../misc/Coords.h"
 
+/**
+ * Holds the data that describes a vertex: position, colour, and uv coordinate.
+ */
 struct Vertex {
     Point3f pos;
     Color color;
     UVCoord uv;
 };
 
+/**
+ * Loads and stores mesh data.
+ */
 class Mesh {
 public:
     Mesh(std::vector<GLfloat> modelData, std::vector<GLuint> indices);

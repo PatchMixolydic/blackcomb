@@ -1,5 +1,5 @@
 <map id="Entity" name="Entity">
-<area shape="rect" id="node2" href="$class_camera.html" title="Camera" alt="" coords="35,80,103,107"/>
-<area shape="rect" id="node4" href="$class_renderable_entity.html" title="RenderableEntity" alt="" coords="127,80,250,107"/>
-<area shape="rect" id="node3" href="$class_free_move_camera.html" title="FreeMoveCamera" alt="" coords="5,155,132,181"/>
+<area shape="rect" id="node2" href="$class_camera.html" title="A repositionable camera entity. " alt="" coords="35,80,103,107"/>
+<area shape="rect" id="node4" href="$class_renderable_entity.html" title="An entity that has a model and can thus be rendered. " alt="" coords="127,80,250,107"/>
+<area shape="rect" id="node3" href="$class_free_move_camera.html" title="A camera that can be used to look around a scene freely. " alt="" coords="5,155,132,181"/>
 </map>

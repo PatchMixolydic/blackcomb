@@ -4,6 +4,9 @@
 #include "Entity.h"
 #include "../renderer/Model.h"
 
+/**
+ * An entity that has a model and can thus be rendered.
+ */
 class RenderableEntity : public Entity {
 public:
     RenderableEntity(Model& model);

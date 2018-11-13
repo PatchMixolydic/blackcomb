@@ -4,6 +4,9 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
+/**
+ * Keeps track of mouse position and informs other components about the mouse.
+ */
 class MouseWatcher {
 public:
     glm::vec2 update(GLFWwindow* window);

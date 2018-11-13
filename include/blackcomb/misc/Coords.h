@@ -3,20 +3,30 @@
 
 #include <functional>
 
+/**
+ * Represents a set of UV coordinates.
+ */
 struct UVCoord {
     bool operator==(const UVCoord& other) const;
     float u;
     float v;
 };
 
+/**
+ * Represents a rectangle in UV space. Composed of two UV points, one for the bottom left corner and one for the top right.
+ */
 struct UVRect {
     bool operator==(const UVRect& other) const;
-    UVCoord botLeft;
-    UVCoord topRight;
+    UVCoord botLeft; ///< Bottom left corner of the UV rectangle.
+    UVCoord topRight; ///< Top right corner of the UV rectangle.
 };
 
 struct Point2i;
 
+/**
+ * Represents a 2D point with floats.
+ * \todo Could this be replaced with a template?
+ */
 struct Point2f {
     bool operator==(const Point2f& other) const;
     bool operator==(const Point2i& other) const;
@@ -24,6 +34,10 @@ struct Point2f {
     float y;
 };
 
+/**
+ * Represents a 2D point with integers.
+ * \todo Could this be replaced with a template?
+ */
 struct Point2i {
     bool operator==(const Point2f& other) const;
     bool operator==(const Point2i& other) const;
@@ -33,6 +47,11 @@ struct Point2i {
 
 struct Point3i;
 
+/**
+ * Represents a 3D point with floats.
+ * \todo Could this be replaced with a template?
+ */
+
 struct Point3f {
     bool operator==(const Point3f& other) const;
     bool operator==(const Point3i& other) const;
@@ -40,6 +59,11 @@ struct Point3f {
     float y;
     float z;
 };
+
+/**
+ * Represents a 3D point with integers.
+ * \todo Could this be replaced with a template?
+ */
 
 struct Point3i {
     bool operator==(const Point3f& other) const;
@@ -49,6 +73,9 @@ struct Point3i {
     int z;
 };
 
+/**
+ * Represents a colour in the RGBA colour space.
+ */
 struct Color {
     bool operator==(const Color& other) const;
     int r;
@@ -58,6 +85,9 @@ struct Color {
 };
 
 namespace std {
+    /**
+     * Implementation of std::hash for [Point3f](@ref Point3f)
+     */
     template <>
     struct hash<Point3f> {
         std::size_t operator()(const Point3f& k) const {
@@ -65,6 +95,9 @@ namespace std {
         }
     };
 
+    /**
+     * Implementation of std::hash for [Point3i](@ref Point3i)
+     */
     template <>
     struct hash<Point3i> {
         std::size_t operator()(const Point3i& k) const {

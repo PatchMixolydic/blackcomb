@@ -4,6 +4,9 @@
 #include "Camera.h"
 #include "../input/MouseWatcher.h"
 
+/**
+ * A camera that can be used to look around a scene freely.
+ */
 class FreeMoveCamera : public Camera {
 public:
     void loadViewMatrix(Shader shader) override;

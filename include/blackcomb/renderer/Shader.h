@@ -6,6 +6,14 @@
 #include <vector>
 #include <glad/glad.h>
 
+/** \file Shader.h
+ *  Contains the [Shader](@ref Shader) class and some helpful shader-related utilities.
+ */
+
+/**
+ * A mapping of OpenGL shader type constants to human-readable names.
+ * 0 is used as a default variable by getShaderName.
+ */
 const std::unordered_map<GLuint, std::string> ShaderNames = {
     {GL_VERTEX_SHADER, "vertex shader"},
     {GL_FRAGMENT_SHADER, "fragment shader"},
@@ -16,6 +24,9 @@ const std::unordered_map<GLuint, std::string> ShaderNames = {
     {0, "shader"}
 };
 
+/** \fn static std::string getShaderName(GLuint shaderType)
+ * Helper function to get a shader name from ShaderNames, or to give a default name if the shader type is unknown.
+ */
 static std::string getShaderName(GLuint shaderType) {
     auto res = ShaderNames.find(shaderType);
     if (res != ShaderNames.end()) {
@@ -24,6 +35,9 @@ static std::string getShaderName(GLuint shaderType) {
     return ShaderNames.at(0);
 }
 
+/**
+ * Loads and stores shaders. Currently only supports GLSL shaders.
+ */
 class Shader {
 public:
     Shader(std::string vertexFilename, std::string fragmentFilename);
