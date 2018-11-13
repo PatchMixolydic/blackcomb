@@ -1,0 +1,5 @@
+<map id="Entity" name="Entity">
+<area shape="rect" id="node2" href="$class_camera.html" title="Camera" alt="" coords="35,80,103,107"/>
+<area shape="rect" id="node4" href="$class_renderable_entity.html" title="RenderableEntity" alt="" coords="127,80,250,107"/>
+<area shape="rect" id="node3" href="$class_free_move_camera.html" title="FreeMoveCamera" alt="" coords="5,155,132,181"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Vertex" name="Vertex">
+<area shape="rect" id="node2" href="$struct_u_v_coord.html" title="UVCoord" alt="" coords="5,5,81,32"/>
+<area shape="rect" id="node3" href="$struct_point3f.html" title="Point3f" alt="" coords="105,5,168,32"/>
+<area shape="rect" id="node4" href="$struct_color.html" title="Color" alt="" coords="193,5,246,32"/>
+</map>
