@@ -12,7 +12,7 @@
 
 /**
  * A mapping of OpenGL shader type constants to human-readable names.
- * 0 is used as a default variable by getShaderName.
+ * Key 0 is used for a default name in case the actual shader name is unknown.
  */
 const std::unordered_map<GLuint, std::string> ShaderNames = {
     {GL_VERTEX_SHADER, "vertex shader"},
