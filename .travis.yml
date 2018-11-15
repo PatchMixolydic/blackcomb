@@ -12,8 +12,7 @@ addons:
       - g++-7
 
 before_install:
-  - pwd
-  - chmod +x ./thirdparty/send.sh
+  - chmod +x ./thirdparty/travis_discord_hook.sh
   - ./thirdparty/send.sh started $WEBHOOK_URL
   - sudo apt-get update
   - sudo apt-get install -y libglfw3-dev libglm-dev
@@ -25,7 +24,7 @@ script:
   - make
 
 after_success:
-  - ./thirdparty/send.sh success $WEBHOOK_URL
+  - ./thirdparty/travis_discord_hook.sh success $WEBHOOK_URL
 
 after_failure:
-  - ./thirdparty/send.sh failure $WEBHOOK_URL
+  - ./thirdparty/travis_discord_hook.sh failure $WEBHOOK_URL
