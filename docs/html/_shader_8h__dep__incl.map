@@ -1,6 +1,0 @@
-<map id="include/blackcomb/renderer/Shader.h" name="include/blackcomb/renderer/Shader.h">
-<area shape="rect" id="node2" href="$_camera_8h_source.html" title="include/blackcomb/entities\l/Camera.h" alt="" coords="5,95,181,136"/>
-<area shape="rect" id="node4" href="$_model_8h_source.html" title="include/blackcomb/renderer\l/Model.h" alt="" coords="205,95,387,136"/>
-<area shape="rect" id="node3" href="$_free_move_camera_8h_source.html" title="include/blackcomb/entities\l/FreeMoveCamera.h" alt="" coords="5,184,181,225"/>
-<area shape="rect" id="node5" href="$_renderable_entity_8h_source.html" title="include/blackcomb/entities\l/RenderableEntity.h" alt="" coords="208,184,384,225"/>
-</map>

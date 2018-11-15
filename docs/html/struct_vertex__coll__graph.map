@@ -1,5 +1,0 @@
-<map id="Vertex" name="Vertex">
-<area shape="rect" id="node2" href="$struct_u_v_coord.html" title="Represents a set of UV coordinates. " alt="" coords="5,5,81,32"/>
-<area shape="rect" id="node3" href="$struct_point3f.html" title="Represents a 3D point with floats. " alt="" coords="105,5,168,32"/>
-<area shape="rect" id="node4" href="$struct_color.html" title="Represents a colour in the RGBA colour space. " alt="" coords="193,5,246,32"/>
-</map>
