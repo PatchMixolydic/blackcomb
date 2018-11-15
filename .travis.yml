@@ -1,12 +1,11 @@
 language: cpp
-dist: trusty
+dist: xenial
 compiler: gcc
 
 addons:
   apt:
     sources:
       - ubuntu-toolchain-r-test
-      - sourceline: 'ppa:keithw/glfw3'
     packages:
       - gcc-7
       - g++-7
