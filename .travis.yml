@@ -1,0 +1,31 @@
+language: cpp
+dist: trusty
+compiler: gcc
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-7
+      - g++-7
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y libglfw3-dev libglm-dev
+
+script:
+  - export CC=gcc-7
+  - export CXX=g++-7
+  - cmake .
+  - make
+
+after_success:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh success $WEBHOOK_URL
+
+after_failure:
+  - wget https://raw.githubusercontent.com/DiscordHooks/travis-ci-discord-webhook/master/send.sh
+  - chmod +x send.sh
+  - ./send.sh failure $WEBHOOK_URL
