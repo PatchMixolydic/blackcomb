@@ -10,7 +10,7 @@ case $1 in
   "success" )
     EMBED_COLOR=3066993
     STATUS_MESSAGE="Passed"
-    AVATAR="https://travis-ci.org/images/logos/TravisCI-Mascot-blue.png"
+    AVATAR="https://travis-ci.org/images/logos/TravisCI-Mascot-1.png"
     ;;
 
   "failure" )
@@ -21,8 +21,8 @@ case $1 in
 
   "started" )
     EMBED_COLOR=4106927
-    STATUS_MESSAGE="Build started"
-    AVATAR="https://travis-ci.com/images/logos/TravisCI-Mascot-pride.png"
+    STATUS_MESSAGE="Started"
+    AVATAR="https://travis-ci.com/images/logos/TravisCI-Mascot-grey.png"
     ;;
 
   * )
@@ -52,7 +52,7 @@ fi
 TIMESTAMP=$(date --utc +%FT%TZ)
 WEBHOOK_DATA='{
   "username": "Travis CI",
-  "avatar_url": "https://travis-ci.org/images/logos/TravisCI-Mascot-1.png",
+  "avatar_url": "https://travis-ci.org/images/logos/TravisCI-Mascot-pride.png",
   "embeds": [ {
     "color": '$EMBED_COLOR',
     "author": {
