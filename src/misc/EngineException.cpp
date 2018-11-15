@@ -1,4 +1,4 @@
-#include <blackcomb/misc/EngineException.h>
+#include "blackcomb/misc/EngineException.h"
 
 EngineException::EngineException(const char* msg) : msg(msg) {}
 

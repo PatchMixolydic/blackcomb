@@ -1,6 +1,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <blackcomb/entities/FreeMoveCamera.h>
+#include "blackcomb/entities/FreeMoveCamera.h"
 
 void FreeMoveCamera::loadViewMatrix(Shader shader) {
     glm::mat4 view(1.0f);

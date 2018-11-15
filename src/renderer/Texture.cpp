@@ -1,6 +1,6 @@
 #include <stb_image.h>
 #include <iostream>
-#include <blackcomb/renderer/Texture.h>
+#include "blackcomb/renderer/Texture.h"
 
 Texture::Texture(const char* filename) {
     glGenTextures(1, &textureId);

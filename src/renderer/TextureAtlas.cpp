@@ -1,4 +1,4 @@
-#include <blackcomb/renderer/TextureAtlas.h>
+#include "blackcomb/renderer/TextureAtlas.h"
 
 TextureAtlas::TextureAtlas(std::string textureFilename, int textureWidth, int textureHeight) :
 textureWidth(textureWidth), textureHeight(textureHeight), atlas(Texture(textureFilename.c_str())) {

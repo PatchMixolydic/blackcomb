@@ -1,4 +1,4 @@
-#include <blackcomb/input/MouseWatcher.h>
+#include "blackcomb/input/MouseWatcher.h"
 
 bool MouseWatcher::hasFocus = true;
 

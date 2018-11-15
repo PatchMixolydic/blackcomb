@@ -1,4 +1,4 @@
-#include <blackcomb/misc/Coords.h>
+#include "blackcomb/misc/Coords.h"
 
 bool UVCoord::operator==(const UVCoord &other) const {
     return u == other.u && v == other.v;

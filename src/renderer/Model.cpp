@@ -1,5 +1,5 @@
 #include <iostream>
-#include <blackcomb/renderer/Model.h>
+#include "blackcomb/renderer/Model.h"
 
 Model::Model(Mesh mesh, Texture texture) : mesh(mesh), texture(texture) {}
 

@@ -1,7 +1,6 @@
 #include <iostream>
-#include <blackcomb/renderer/Window.h>
-#include <blackcomb/misc/Coords.h>
-#include <blackcomb/renderer/Window.h>
+#include "blackcomb/renderer/Window.h"
+#include "blackcomb/misc/Coords.h"
 
 Window::Window(const char* name) : Window::Window(DefaultWidth, DefaultHeight, name) {}
 
