@@ -12,7 +12,8 @@ addons:
       - g++-7
 
 before_install:
-  - chmod +x thirdparty/send.sh
+  - pwd
+  - chmod +x ./thirdparty/send.sh
   - ./thirdparty/send.sh started $WEBHOOK_URL
   - sudo apt-get update
   - sudo apt-get install -y libglfw3-dev libglm-dev

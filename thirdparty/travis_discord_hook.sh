@@ -19,6 +19,12 @@ case $1 in
     AVATAR="https://travis-ci.org/images/logos/TravisCI-Mascot-red.png"
     ;;
 
+  "started" )
+    EMBED_COLOR=4106927
+    STATUS_MESSAGE="Build started"
+    AVATAR="https://travis-ci.com/images/logos/TravisCI-Mascot-pride.png"
+    ;;
+
   * )
     EMBED_COLOR=0
     STATUS_MESSAGE="Status Unknown"
