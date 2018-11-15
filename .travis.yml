@@ -9,12 +9,12 @@ addons:
     packages:
       - gcc-7
       - g++-7
+      - libglfw3-dev
+      - libglm-dev
 
 before_install:
   - chmod +x ./thirdparty/travis_discord_hook.sh
   - ./thirdparty/travis_discord_hook.sh started $WEBHOOK_URL
-  - sudo apt-get update
-  - sudo apt-get install -y libglfw3-dev libglm-dev
 
 script:
   - export CC=gcc-7
