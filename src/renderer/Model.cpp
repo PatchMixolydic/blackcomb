@@ -1,6 +1,8 @@
 #include <iostream>
 #include "blackcomb/renderer/Model.h"
 
+using namespace renderer;
+
 Model::Model(Mesh mesh, Texture texture) : mesh(mesh), texture(texture) {}
 
 Model::Model() : mesh(Mesh(std::vector<float>{}, {})), texture(Texture(MissingTextureFilename)) {}

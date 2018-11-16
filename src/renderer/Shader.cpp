@@ -5,6 +5,8 @@
 #include "blackcomb/renderer/Shader.h"
 #include "blackcomb/misc/EngineException.h"
 
+using namespace renderer;
+
 Shader::Shader(std::string vertexFilename, std::string fragmentFilename) {
     GLuint vertexShader = loadAndCompileShader(GL_VERTEX_SHADER, vertexFilename);
     reportCompileStatus(GL_VERTEX_SHADER, vertexShader);

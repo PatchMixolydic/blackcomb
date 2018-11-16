@@ -1,19 +1,20 @@
 #ifndef CRAFTCLONE_RENDERABLEENTITY_H
 #define CRAFTCLONE_RENDERABLEENTITY_H
 
-#include "Entity.h"
+#include "BaseEntity.h"
 #include "../renderer/Model.h"
 
+namespace entity {
 /**
  * An entity that has a model and can thus be rendered.
  */
-class RenderableEntity : public Entity {
-public:
-    RenderableEntity(Model& model);
-    void render(Shader shader);
-private:
-    Model model;
-};
-
+    class RenderableEntity : public BaseEntity {
+    public:
+        RenderableEntity(renderer::Model &model);
+        void render(renderer::Shader shader);
+    private:
+        renderer::Model model;
+    };
+}
 
 #endif //CRAFTCLONE_RENDERABLEENTITY_H

@@ -1,5 +1,7 @@
 #include "blackcomb/input/MouseWatcher.h"
 
+using namespace input;
+
 bool MouseWatcher::hasFocus = true;
 
 /**

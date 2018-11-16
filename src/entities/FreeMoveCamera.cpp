@@ -2,7 +2,9 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "blackcomb/entities/FreeMoveCamera.h"
 
-void FreeMoveCamera::loadViewMatrix(Shader shader) {
+using namespace entity;
+
+void FreeMoveCamera::loadViewMatrix(renderer::Shader shader) {
     glm::mat4 view(1.0f);
     view = glm::lookAt(pos, pos + front, up);
     shader.setUniformMat4F("view", glm::value_ptr(view));
@@ -28,7 +30,7 @@ void FreeMoveCamera::processInput(GLFWwindow* window, float deltaTime) {
         setPos(pos + glm::normalize(glm::cross(front, up)) * speed * deltaTime);
     }
 
-    if (!MouseWatcher::hasFocus) return;
+    if (!input::MouseWatcher::hasFocus) return;
 
     glm::vec2 mouseDelta = mouseWatcher.update(window);
 

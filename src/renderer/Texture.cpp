@@ -2,6 +2,8 @@
 #include <iostream>
 #include "blackcomb/renderer/Texture.h"
 
+using namespace renderer;
+
 Texture::Texture(const char* filename) {
     glGenTextures(1, &textureId);
     glBindTexture(GL_TEXTURE_2D, textureId);

@@ -1,5 +1,7 @@
 #include "blackcomb/renderer/Mesh.h"
 
+using namespace renderer;
+
 Mesh::Mesh(std::vector<GLfloat> modelData, std::vector<GLuint> indices) : numVerts(modelData.size() / (3 /*xyz*/ + 3 /*rgb*/ + 2 /*uv*/)), numIndices(indices.size()) {
     glGenVertexArrays(1, &vao);
     glGenBuffers(1, &vbo);
