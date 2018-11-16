@@ -5,7 +5,8 @@
 #include <glm/glm.hpp>
 
 /**
- * A generic entity class. Has a position, rotation, and scale. Has an "update" function.
+ * A generic entity class.
+ * Contains functions for setting position, rotation, and scale, as well as supporting
  */
 class Entity {
 public:

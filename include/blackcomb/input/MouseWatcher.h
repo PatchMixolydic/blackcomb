@@ -10,8 +10,8 @@
 class MouseWatcher {
 public:
     glm::vec2 update(GLFWwindow* window);
-    static bool hasFocus;
-    float mouseSensitivity = 0.05f;
+    static bool hasFocus; ///< Does the window have focus?
+    float mouseSensitivity = 0.05f; ///< Controls the sensitivity of mouse tracking.
 private:
     double lastMouseX = 400, lastMouseY = 300;
     bool mouseUnseen = true;

@@ -11,7 +11,7 @@ class FreeMoveCamera : public Camera {
 public:
     void loadViewMatrix(Shader shader) override;
     void processInput(GLFWwindow* window, float deltaTime);
-    float speed = 5.0f;
+    float speed = 5.0f; ///< The speed at which the camera moves.
 private:
     glm::vec3 front = glm::vec3(0.0f, 0.0f, -1.0f);
     glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);

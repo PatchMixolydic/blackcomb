@@ -24,7 +24,7 @@ const std::unordered_map<GLuint, std::string> ShaderNames = {
     {0, "shader"}
 };
 
-/** \fn static std::string getShaderName(GLuint shaderType)
+/**
  * Helper function to get a shader name from ShaderNames, or to give a default name if the shader type is unknown.
  */
 static std::string getShaderName(GLuint shaderType) {

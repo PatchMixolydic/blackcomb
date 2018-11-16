@@ -10,9 +10,7 @@
 class EngineException: public std::exception {
 public:
     EngineException(const char* msg);
-
     virtual const char* what() const throw();
-
 private:
     const char* msg;
 };
