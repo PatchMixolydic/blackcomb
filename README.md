@@ -9,7 +9,4 @@ intend to work on.
 Further documentation can be found at [blackcomb.sparkp.in](http://blackcomb.sparkp.in/).
 
 ## Dependencies
-Blackcomb currently relies on GLAD, GLFW, and stb_image.h.
-
-Some details about the location of these libraries can be configured by CMake.
-The defaults are not guaranteed to be sane.
+Blackcomb currently relies on GLFW and GLM.
