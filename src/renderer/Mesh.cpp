@@ -41,6 +41,9 @@ Mesh::Mesh(std::vector<Vertex> vertices, std::vector<GLuint> indices) {
     new (this) Mesh(modelData, indices); // Yucky.
 }
 
+/**
+ * Get rid of the mesh's OpenGL objects.
+ */
 void Mesh::cleanup() {
     if (vao) {
         vao = 0;
@@ -52,6 +55,10 @@ void Mesh::cleanup() {
     }
 }
 
+/**
+ * Draw this mesh. Will not work on its own, you should probably bind this to a @ref Model and use Model::render
+ * instead.
+ */
 void Mesh::render() {
     glBindVertexArray(vao);
     glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(numIndices), GL_UNSIGNED_INT, 0);

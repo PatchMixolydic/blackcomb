@@ -6,7 +6,7 @@
 
 /**
  * A generic entity class.
- * Contains functions for setting position, rotation, and scale, as well as supporting
+ * Contains functions for setting position, rotation, and scale, as well as supporting a function that is called every tick.
  */
 class Entity {
 public:
@@ -32,10 +32,10 @@ public:
     virtual void update();
 protected:
     void updateTransMat();
-    glm::vec3 pos = glm::vec3(0.0f, 0.0f, 0.0f);
-    glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f);
-    glm::vec3 scale = glm::vec3(1.0f, 1.0f, 1.0f);
-    glm::mat4 transform = glm::mat4(1.0f);
+    glm::vec3 pos = glm::vec3(0.0f, 0.0f, 0.0f); ///< The position of the entity in 3D space.
+    glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f); ///< The rotation of the entity on the XYZ axes, in degrees.
+    glm::vec3 scale = glm::vec3(1.0f, 1.0f, 1.0f); ///< The scale of the entity.
+    glm::mat4 transform = glm::mat4(1.0f); ///< The transformation matrix for the entity.
 };
 
 

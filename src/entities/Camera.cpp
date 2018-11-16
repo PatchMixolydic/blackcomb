@@ -2,6 +2,11 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "blackcomb/entities/Camera.h"
 
+/**
+ * Generate a view matrix and load it into a shader.
+ *
+ * @param shader The @ref Shader to load the view matrix into.
+ */
 void Camera::loadViewMatrix(Shader shader) {
     glm::mat4 view(1.0f);
     view = glm::translate(transform, pos);
@@ -12,6 +17,12 @@ void Camera::loadViewMatrix(Shader shader) {
     shader.setUniformMat4F("view", glm::value_ptr(view));
 }
 
+/**
+ * Generate a projection matrix and load it into a shader.
+ *
+ * @param shader The @ref Shader to load the projection matrix into.
+ * @param window The @ref Window that you want the projection matrix for.
+ */
 void Camera::loadProjectionMatrix(Shader shader, Window window) {
     Point2i winDims = window.getDims();
     glm::mat4 projection = glm::perspective(glm::radians(fov), (float)winDims.x / winDims.y, 0.1f, 100.0f);

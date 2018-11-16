@@ -8,6 +8,12 @@ void FreeMoveCamera::loadViewMatrix(Shader shader) {
     shader.setUniformMat4F("view", glm::value_ptr(view));
 }
 
+/**
+ * Process input and move the camera accordingly
+ *
+ * @param window The pointer to the window that the mouse should be tracked over.
+ * @param deltaTime Time since the last tick.
+ */
 void FreeMoveCamera::processInput(GLFWwindow* window, float deltaTime) {
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
         setPos(pos + speed * deltaTime * front);

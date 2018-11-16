@@ -8,10 +8,17 @@ textureWidth(textureWidth), textureHeight(textureHeight), atlas(Texture(textureF
     centerOffsetY = 1.0f / (numRows);
 }
 
+/**
+ * Get the @ref Texture for the texture atlas
+ */
 Texture TextureAtlas::getTexture() {
     return atlas;
 }
 
+/**
+ * Get the coordinates for a texture in the atlas
+ * @param texture The index of the texture, left to right, top to bottom, zero indexed
+ */
 UVRect TextureAtlas::getCoordsForTexture(int texture) {
     float leftX = texture % numColumns;
     float botY = (numRows - 1) - (texture / numColumns);

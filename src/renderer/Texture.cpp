@@ -36,10 +36,16 @@ int Texture::getHeight(){
     return height;
 }
 
+/**
+ * Bind the texture for use.
+ */
 void Texture::bind() {
     glBindTexture(GL_TEXTURE_2D, textureId);
 }
 
+/**
+ * Unbind the texture.
+ */
 void Texture::unbind() {
     glBindTexture(GL_TEXTURE_2D, 0);
 }

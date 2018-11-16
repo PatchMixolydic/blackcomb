@@ -2,6 +2,11 @@
 
 bool MouseWatcher::hasFocus = true;
 
+/**
+ * Update the mouse position.
+ * @param window The window to watch for mouse motion in.
+ * @return The change in mouse position.
+ */
 glm::vec2 MouseWatcher::update(GLFWwindow* window) {
     if (!hasFocus) {
         return glm::vec2(lastMouseX, lastMouseY);

@@ -9,6 +9,9 @@ void Model::cleanup() {
     mesh.cleanup();
 }
 
+/**
+ * Draw the model.
+ */
 void Model::render() {
     texture.bind();
     mesh.render();
