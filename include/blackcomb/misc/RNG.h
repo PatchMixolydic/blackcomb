@@ -15,6 +15,7 @@ namespace misc {
         template <typename T> T random();
         template <typename T> T randInt(T min, T max);
         template <typename T> T choice(std::vector<T> vec);
+        void setSeed(unsigned long seed);
     private:
         std::random_device rd;
         std::mt19937 generator;

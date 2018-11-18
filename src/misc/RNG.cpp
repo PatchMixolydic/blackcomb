@@ -2,9 +2,7 @@
 
 misc::RNG::RNG() : generator(rd()) {}
 
-misc::RNG::RNG(unsigned long seed) : generator(rd()) {
-    generator.seed(seed);
-}
+misc::RNG::RNG(unsigned long seed) : generator(seed) {}
 
 /**
  * Generates a random number in a range from min to max, inclusive.
@@ -41,4 +39,11 @@ T misc::RNG::randInt(T min, T max) {
 template<typename T>
 T misc::RNG::choice(std::vector<T> vec) {
     return vec.at(randInt<unsigned long>(0, vec.size() - 1));
+}
+
+/**
+ * Sets the random number generator's seed
+ */
+void misc::RNG::setSeed(unsigned long seed) {
+    generator.seed(seed);
 }
