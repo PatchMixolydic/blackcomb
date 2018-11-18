@@ -24,7 +24,7 @@ namespace renderer {
         GLFWwindow* getHandle();
         Point2i getDims();
         void setFramebufferSizeCallback(GLFWframebuffersizefun fbSizeCallback);
-        void setWindowTitle(std::string title);
+        void setWindowTitle(const std::string& title);
     private:
         GLFWwindow* handle;
     };

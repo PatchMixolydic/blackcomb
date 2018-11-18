@@ -92,6 +92,6 @@ void Window::setFramebufferSizeCallback(GLFWframebuffersizefun fbSizeCallback) {
 /**
  * Sets the window title.
  */
-void Window::setWindowTitle(std::string title) {
+void Window::setWindowTitle(const std::string& title) {
     glfwSetWindowTitle(handle, title.c_str());
 }
