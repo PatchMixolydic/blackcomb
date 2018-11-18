@@ -7,7 +7,7 @@
 
 using namespace renderer;
 
-Shader::Shader(std::string vertexFilename, std::string fragmentFilename) {
+Shader::Shader(const std::string& vertexFilename, const std::string& fragmentFilename) {
     GLuint vertexShader = loadAndCompileShader(GL_VERTEX_SHADER, vertexFilename);
     reportCompileStatus(GL_VERTEX_SHADER, vertexShader);
     GLuint fragmentShader = loadAndCompileShader(GL_FRAGMENT_SHADER, fragmentFilename);
@@ -44,7 +44,7 @@ void Shader::unbind() {
  * @param filename The filename of the shader.
  * @return The id of the OpenGL shader object.
  */
-GLuint Shader::loadAndCompileShader(unsigned int shaderType, std::string filename) {
+GLuint Shader::loadAndCompileShader(unsigned int shaderType, const std::string& filename) {
     std::ifstream shaderFile(filename);
     std::string shaderSource(std::istreambuf_iterator<char>(shaderFile), {});
     const char* shaderSourceCStr = shaderSource.c_str();
@@ -120,7 +120,7 @@ void Shader::setUniformDouble(const char* name, double val) {
  * @param name The name of the uniform variable.
  * @param val The values to pass to the shader.
  */
-void Shader::setUniformVecF(const char* name, std::vector<float> val) {
+void Shader::setUniformVecF(const char* name, std::vector<float>& val) {
     setUniformVecF(name, val.data(), val.size());
 }
 

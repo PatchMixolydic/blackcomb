@@ -28,9 +28,9 @@ Mesh::Mesh(std::vector<GLfloat> modelData, std::vector<GLuint> indices) : numVer
     glBindVertexArray(0);
 }
 
-Mesh::Mesh(std::vector<Vertex> vertices, std::vector<GLuint> indices) {
+Mesh::Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices) {
     std::vector<GLfloat> modelData = {};
-    for (Vertex vertex : vertices) {
+    for (Vertex& vertex : vertices) {
         modelData.push_back(vertex.pos.x);
         modelData.push_back(vertex.pos.y);
         modelData.push_back(vertex.pos.z);

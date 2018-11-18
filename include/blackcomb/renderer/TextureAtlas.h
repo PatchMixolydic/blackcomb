@@ -11,7 +11,7 @@ namespace renderer {
  */
     class TextureAtlas {
     public:
-        TextureAtlas(std::string textureFilename, int textureWidth, int textureHeight);
+        TextureAtlas(const std::string& textureFilename, int textureWidth, int textureHeight);
         Texture getTexture();
         UVRect getCoordsForTexture(int texture);
 

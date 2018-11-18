@@ -10,7 +10,7 @@ namespace input {
  */
     class MouseWatcher {
     public:
-        glm::vec2 update(GLFWwindow* window);
+        glm::vec2 update(renderer::Window& window);
         static bool hasFocus; ///< Does the window have focus?
         float mouseSensitivity = 0.05f; ///< Controls the sensitivity of mouse tracking.
     private:

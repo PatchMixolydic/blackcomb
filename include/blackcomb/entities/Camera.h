@@ -12,8 +12,8 @@ namespace entity {
  */
     class Camera : public BaseEntity {
     public:
-        virtual void loadViewMatrix(renderer::Shader shader);
-        void loadProjectionMatrix(renderer::Shader shader, renderer::Window window);
+        virtual void loadViewMatrix(renderer::Shader& shader);
+        void loadProjectionMatrix(renderer::Shader& shader, renderer::Window& window);
         float fov = 90.0f; ///< Field of view of the camera.
     };
 }

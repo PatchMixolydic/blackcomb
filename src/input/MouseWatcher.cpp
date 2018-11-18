@@ -1,3 +1,4 @@
+#include "blackcomb/renderer/Window.h"
 #include "blackcomb/input/MouseWatcher.h"
 
 using namespace input;
@@ -9,13 +10,13 @@ bool MouseWatcher::hasFocus = true;
  * @param window The window to watch for mouse motion in.
  * @return The change in mouse position.
  */
-glm::vec2 MouseWatcher::update(GLFWwindow* window) {
+glm::vec2 MouseWatcher::update(renderer::Window& window) {
     if (!hasFocus) {
         return glm::vec2(lastMouseX, lastMouseY);
     }
 
     double mouseX, mouseY;
-    glfwGetCursorPos(window, &mouseX, &mouseY);
+    glfwGetCursorPos(window.getHandle(), &mouseX, &mouseY);
 
     if (mouseUnseen) {
         lastMouseX = mouseX;

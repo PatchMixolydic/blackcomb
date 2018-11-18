@@ -88,3 +88,10 @@ Point2i Window::getDims() {
 void Window::setFramebufferSizeCallback(GLFWframebuffersizefun fbSizeCallback) {
     glfwSetFramebufferSizeCallback(handle, fbSizeCallback);
 }
+
+/**
+ * Sets the window title.
+ */
+void Window::setWindowTitle(std::string title) {
+    glfwSetWindowTitle(handle, title.c_str());
+}

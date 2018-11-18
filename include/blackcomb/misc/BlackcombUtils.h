@@ -7,7 +7,7 @@
  * Various useful utilities.
  */
 namespace BlackcombUtils {
-    template <typename Key, typename Value> Value getValOrDefault(std::unordered_map<Key, Value> map, Key key, Value defaultVal = nullptr);
+    template <typename Key, typename Value> Value getValOrDefault(std::unordered_map<Key, Value>& map, Key& key, Value defaultVal = nullptr);
 };
 
 #endif //CRAFTCLONE_UTILS_H

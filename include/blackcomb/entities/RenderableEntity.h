@@ -11,7 +11,7 @@ namespace entity {
     class RenderableEntity : public BaseEntity {
     public:
         RenderableEntity(renderer::Model &model);
-        void render(renderer::Shader shader);
+        void render(renderer::Shader& shader);
     private:
         renderer::Model model;
     };

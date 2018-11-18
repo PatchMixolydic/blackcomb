@@ -4,7 +4,7 @@
 
 using namespace entity;
 
-void FreeMoveCamera::loadViewMatrix(renderer::Shader shader) {
+void FreeMoveCamera::loadViewMatrix(renderer::Shader& shader) {
     glm::mat4 view(1.0f);
     view = glm::lookAt(pos, pos + front, up);
     shader.setUniformMat4F("view", glm::value_ptr(view));
@@ -16,17 +16,17 @@ void FreeMoveCamera::loadViewMatrix(renderer::Shader shader) {
  * @param window The pointer to the window that the mouse should be tracked over.
  * @param deltaTime Time since the last tick.
  */
-void FreeMoveCamera::processInput(GLFWwindow* window, float deltaTime) {
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+void FreeMoveCamera::processInput(renderer::Window& window, float deltaTime) {
+    if (window.getKey(GLFW_KEY_W) == GLFW_PRESS) {
         setPos(pos + speed * deltaTime * front);
     }
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+    if (window.getKey(GLFW_KEY_S) == GLFW_PRESS) {
         setPos(pos - speed * deltaTime * front);
     }
-    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+    if (window.getKey(GLFW_KEY_A) == GLFW_PRESS) {
         setPos(pos - glm::normalize(glm::cross(front, up)) * speed * deltaTime);
     }
-    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+    if (window.getKey(GLFW_KEY_D) == GLFW_PRESS) {
         setPos(pos + glm::normalize(glm::cross(front, up)) * speed * deltaTime);
     }
 

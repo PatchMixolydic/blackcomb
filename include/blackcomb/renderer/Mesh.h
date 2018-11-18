@@ -21,7 +21,7 @@ namespace renderer {
     class Mesh {
     public:
         Mesh(std::vector<GLfloat> modelData, std::vector<GLuint> indices);
-        Mesh(std::vector<Vertex> vertices, std::vector<GLuint> indices);
+        Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices);
         void cleanup();
         void render();
         GLuint vao = 0;

@@ -41,18 +41,18 @@ namespace renderer {
      */
     class Shader {
     public:
-        Shader(std::string vertexFilename, std::string fragmentFilename);
+        Shader(const std::string& vertexFilename, const std::string& fragmentFilename);
         void bind();
         static void unbind();
         void setUniformInt(const char* name, int val);
         void setUniformFloat(const char* name, float val);
         void setUniformDouble(const char* name, double val);
-        void setUniformVecF(const char* name, std::vector<GLfloat> val);
+        void setUniformVecF(const char* name, std::vector<GLfloat>& val);
         void setUniformVecF(const char* name, float val[], size_t size);
         void setUniformMat4F(const char* name, GLfloat* value, GLboolean transpose = GL_FALSE);
         GLuint program;
     private:
-        GLuint loadAndCompileShader(unsigned int shaderType, std::string filename);
+        GLuint loadAndCompileShader(unsigned int shaderType, const std::string& filename);
         void reportCompileStatus(GLuint shaderType, GLuint shader);
         void reportLinkStatus(GLuint program);
     };

@@ -9,7 +9,7 @@
  * @return Either map.at(key) or defaultVal
  */
 template<typename Key, typename Value>
-Value BlackcombUtils::getValOrDefault(std::unordered_map<Key, Value> map, Key key, Value defaultVal) {
+Value BlackcombUtils::getValOrDefault(std::unordered_map<Key, Value>& map, Key& key, Value defaultVal) {
     auto res = map.find(key);
     if (res != map.end()) {
         return res->second;

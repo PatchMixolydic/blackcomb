@@ -2,7 +2,7 @@
 
 using namespace renderer;
 
-TextureAtlas::TextureAtlas(std::string textureFilename, int textureWidth, int textureHeight) :
+TextureAtlas::TextureAtlas(const std::string& textureFilename, int textureWidth, int textureHeight) :
 textureWidth(textureWidth), textureHeight(textureHeight), atlas(Texture(textureFilename.c_str())) {
     numColumns = atlas.getWidth() / textureWidth;
     numRows = atlas.getHeight() / textureHeight;
