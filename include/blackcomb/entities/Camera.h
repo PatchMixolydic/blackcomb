@@ -3,7 +3,7 @@
 
 #include "BaseEntity.h"
 #include "../renderer/Shader.h"
-#include "../renderer/Window.h"
+#include "blackcomb/base/Window.h"
 
 namespace entity {
 /**

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "blackcomb/renderer/Window.h"
+#include "blackcomb/base/Window.h"
 #include "blackcomb/misc/Coords.h"
 
 using namespace renderer;

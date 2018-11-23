@@ -2,7 +2,7 @@
 #define CRAFTCLONE_WINDOW_H
 
 #include <GLFW/glfw3.h>
-#include "../misc/Coords.h"
+#include "blackcomb/misc/Coords.h"
 
 namespace renderer {
     const unsigned int DefaultWidth = 800;

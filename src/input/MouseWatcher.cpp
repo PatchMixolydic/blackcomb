@@ -1,4 +1,4 @@
-#include "blackcomb/renderer/Window.h"
+#include "blackcomb/base/Window.h"
 #include "blackcomb/input/MouseWatcher.h"
 
 using namespace input;
