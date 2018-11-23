@@ -43,6 +43,8 @@ Mesh::Mesh(std::vector<Vertex>& vertices, std::vector<GLuint>& indices) {
     new (this) Mesh(modelData, indices); // Yucky.
 }
 
+Mesh::Mesh() : Mesh(std::vector<GLfloat>{}, std::vector<GLuint>{}) {}
+
 /**
  * Get rid of the mesh's OpenGL objects.
  */
