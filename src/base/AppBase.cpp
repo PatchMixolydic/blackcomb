@@ -37,11 +37,17 @@ renderer::Window& AppBase::getWindow() {
     return window.value();
 }
 
+/**
+ * Call this function to run your application.
+ * Starts a loop that every frame updates delta time, handles input, clears colour and depth bits, calls update(), swaps the buffers, and polls for events.
+ * Can be overriden for fine grained control, but it is recommended you override AppBase.update instead.
+ */
 void AppBase::run() {
     while (!getWindow().shouldClose()) {
         float now = static_cast<float>(glfwGetTime());
         deltaTime = now - lastFrame;
         lastFrame = now;
+        processInput();
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         update();
@@ -52,6 +58,12 @@ void AppBase::run() {
 
 }
 
+/**
+ * Called once per frame after run() is called.
+ */
 void AppBase::update() {}
 
+/**
+ * Input handling code. Run once per frame after run() is called.
+ */
 void AppBase::processInput() {}
