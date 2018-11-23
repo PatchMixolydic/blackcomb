@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_COORDS_H
-#define CRAFTCLONE_COORDS_H
+#ifndef BLACKCOMB_COORDS_H
+#define BLACKCOMB_COORDS_H
 
 #include <functional>
 
@@ -106,4 +106,4 @@ namespace std {
     };
 }
 
-#endif //CRAFTCLONE_COORDS_H
+#endif //BLACKCOMB_COORDS_H

@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_MODEL_H
-#define CRAFTCLONE_MODEL_H
+#ifndef BLACKCOMB_MODEL_H
+#define BLACKCOMB_MODEL_H
 
 #include "Texture.h"
 #include "Mesh.h"
@@ -20,4 +20,4 @@ namespace renderer {
     };
 }
 
-#endif //CRAFTCLONE_MODEL_H
+#endif //BLACKCOMB_MODEL_H

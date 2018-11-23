@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_FREEMOVECAMERA_H
-#define CRAFTCLONE_FREEMOVECAMERA_H
+#ifndef BLACKCOMB_FREEMOVECAMERA_H
+#define BLACKCOMB_FREEMOVECAMERA_H
 
 #include "Camera.h"
 #include "../input/MouseWatcher.h"
@@ -19,4 +19,4 @@ namespace entity {
     };
 }
 
-#endif //CRAFTCLONE_FREEMOVECAMERA_H
+#endif //BLACKCOMB_FREEMOVECAMERA_H

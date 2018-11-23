@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_ENTITY_H
-#define CRAFTCLONE_ENTITY_H
+#ifndef BLACKCOMB_ENTITY_H
+#define BLACKCOMB_ENTITY_H
 
 
 #include <glm/glm.hpp>
@@ -39,4 +39,4 @@ namespace entity {
     };
 }
 
-#endif //CRAFTCLONE_ENTITY_H
+#endif //BLACKCOMB_ENTITY_H

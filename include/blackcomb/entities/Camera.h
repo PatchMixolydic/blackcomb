@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_CAMERA_H
-#define CRAFTCLONE_CAMERA_H
+#ifndef BLACKCOMB_CAMERA_H
+#define BLACKCOMB_CAMERA_H
 
 #include "BaseEntity.h"
 #include "../renderer/Shader.h"
@@ -18,4 +18,4 @@ namespace entity {
     };
 }
 
-#endif //CRAFTCLONE_CAMERA_H
+#endif //BLACKCOMB_CAMERA_H

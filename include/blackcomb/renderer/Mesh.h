@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_MESH_H
-#define CRAFTCLONE_MESH_H
+#ifndef BLACKCOMB_MESH_H
+#define BLACKCOMB_MESH_H
 
 #include <glad/glad.h>
 #include <vector>
@@ -32,4 +32,4 @@ namespace renderer {
     };
 }
 
-#endif //CRAFTCLONE_MESH_H
+#endif //BLACKCOMB_MESH_H

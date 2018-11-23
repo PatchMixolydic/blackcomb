@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_APPBASE_H
-#define CRAFTCLONE_APPBASE_H
+#ifndef BLACKCOMB_APPBASE_H
+#define BLACKCOMB_APPBASE_H
 
 #include <memory>
 #include <glad/glad.h>
@@ -26,4 +26,4 @@ namespace blackcombBase {
 }
 
 
-#endif //CRAFTCLONE_APPBASE_H
+#endif //BLACKCOMB_APPBASE_H

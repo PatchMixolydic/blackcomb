@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_RENDERABLEENTITY_H
-#define CRAFTCLONE_RENDERABLEENTITY_H
+#ifndef BLACKCOMB_RENDERABLEENTITY_H
+#define BLACKCOMB_RENDERABLEENTITY_H
 
 #include "BaseEntity.h"
 #include "../renderer/Model.h"
@@ -17,4 +17,4 @@ namespace entity {
     };
 }
 
-#endif //CRAFTCLONE_RENDERABLEENTITY_H
+#endif //BLACKCOMB_RENDERABLEENTITY_H

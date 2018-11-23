@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_TEXTURE_H
-#define CRAFTCLONE_TEXTURE_H
+#ifndef BLACKCOMB_TEXTURE_H
+#define BLACKCOMB_TEXTURE_H
 
 #include <glad/glad.h>
 
@@ -22,4 +22,4 @@ namespace renderer {
     };
 }
 
-#endif //CRAFTCLONE_TEXTURE_H
+#endif //BLACKCOMB_TEXTURE_H

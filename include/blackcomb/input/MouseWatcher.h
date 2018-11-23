@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_MOUSEWATCHER_H
-#define CRAFTCLONE_MOUSEWATCHER_H
+#ifndef BLACKCOMB_MOUSEWATCHER_H
+#define BLACKCOMB_MOUSEWATCHER_H
 
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -25,4 +25,4 @@ namespace input {
     };
 }
 
-#endif //CRAFTCLONE_MOUSEWATCHER_H
+#endif //BLACKCOMB_MOUSEWATCHER_H

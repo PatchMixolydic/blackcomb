@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_SHADER_H
-#define CRAFTCLONE_SHADER_H
+#ifndef BLACKCOMB_SHADER_H
+#define BLACKCOMB_SHADER_H
 
 #include <string>
 #include <unordered_map>
@@ -58,4 +58,4 @@ namespace renderer {
     };
 }
 
-#endif //CRAFTCLONE_SHADER_H
+#endif //BLACKCOMB_SHADER_H

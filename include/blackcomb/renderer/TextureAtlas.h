@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_TEXTUREATLAS_H
-#define CRAFTCLONE_TEXTUREATLAS_H
+#ifndef BLACKCOMB_TEXTUREATLAS_H
+#define BLACKCOMB_TEXTUREATLAS_H
 
 #include <string>
 #include "Texture.h"
@@ -25,4 +25,4 @@ namespace renderer {
     };
 }
 
-#endif //CRAFTCLONE_TEXTUREATLAS_H
+#endif //BLACKCOMB_TEXTUREATLAS_H

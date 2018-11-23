@@ -1,5 +1,5 @@
-#ifndef CRAFTCLONE_WINDOW_H
-#define CRAFTCLONE_WINDOW_H
+#ifndef BLACKCOMB_WINDOW_H
+#define BLACKCOMB_WINDOW_H
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -39,4 +39,4 @@ namespace blackcombBase {
     };
 }
 
-#endif //CRAFTCLONE_WINDOW_H
+#endif //BLACKCOMB_WINDOW_H
