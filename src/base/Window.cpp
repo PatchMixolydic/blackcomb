@@ -1,10 +1,15 @@
 #include <iostream>
-#include "blackcomb/base/Window.h"
+#include "blackcomb/misc/EngineException.h"
 #include "blackcomb/misc/Coords.h"
+#include "blackcomb/base/Window.h"
 
 using namespace renderer;
 
-Window::Window(const char* name) : Window::Window(DefaultWidth, DefaultHeight, name) {}
+Window::Window() : Window::Window(DefaultWinWidth, DefaultWinHeight, DefaultWinName) {}
+
+Window::Window(const char* name) : Window::Window(DefaultWinWidth, DefaultWinHeight, name) {}
+
+Window::Window(int width, int height) : Window::Window(width, height, DefaultWinName) {}
 
 Window::Window(int width, int height, const char* name) {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -14,9 +19,10 @@ Window::Window(int width, int height, const char* name) {
 
     handle = glfwCreateWindow(width, height, name, nullptr, nullptr);
     if (handle == nullptr) {
-        std::cerr << "Failed to create GLFW window" << std::endl;
-        return;
+        throw EngineException("Failed to create GLFW window");
     }
+
+    setFramebufferSizeCallback(defaultSizeCallback);
 }
 
 /**
@@ -89,9 +95,21 @@ void Window::setFramebufferSizeCallback(GLFWframebuffersizefun fbSizeCallback) {
     glfwSetFramebufferSizeCallback(handle, fbSizeCallback);
 }
 
+void Window::defaultSizeCallback(GLFWwindow* handle, int width, int height) {
+    glViewport(0, 0, width, height);
+}
+
 /**
  * Sets the window title.
  */
 void Window::setWindowTitle(const std::string& title) {
     glfwSetWindowTitle(handle, title.c_str());
+}
+
+void Window::hide() {
+    glfwHideWindow(handle);
+}
+
+void Window::show() {
+    glfwShowWindow(handle);
 }
