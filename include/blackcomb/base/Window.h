@@ -3,6 +3,7 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include "blackcomb/input/MouseWatcher.h"
 #include "blackcomb/misc/Coords.h"
 
 namespace renderer {
@@ -32,6 +33,7 @@ namespace renderer {
         void setWindowTitle(const std::string& title);
         void hide();
         void show();
+        input::MouseWatcher mouseWatcher;
     private:
         GLFWwindow* handle;
     };

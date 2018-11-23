@@ -32,7 +32,7 @@ void FreeMoveCamera::processInput(renderer::Window& window, float deltaTime) {
 
     if (!input::MouseWatcher::hasFocus) return;
 
-    glm::vec2 mouseDelta = mouseWatcher.update(window);
+    glm::vec2 mouseDelta = window.mouseWatcher.getMouseCoords();
 
     setH(rotation.y + mouseDelta.x);
     setP(std::min(std::max(rotation.x + mouseDelta.y, -89.0f), 89.0f));

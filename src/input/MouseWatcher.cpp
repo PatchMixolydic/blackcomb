@@ -10,9 +10,10 @@ bool MouseWatcher::hasFocus = true;
  * @param window The window to watch for mouse motion in.
  * @return The change in mouse position.
  */
-glm::vec2 MouseWatcher::update(renderer::Window& window) {
+void MouseWatcher::update(renderer::Window& window) {
     if (!hasFocus) {
-        return glm::vec2(lastMouseX, lastMouseY);
+        mouseCoords = glm::vec2(0, 0);
+        return;
     }
 
     double mouseX, mouseY;
@@ -32,5 +33,9 @@ glm::vec2 MouseWatcher::update(renderer::Window& window) {
     mouseDeltaX *= mouseSensitivity;
     mouseDeltaY *= mouseSensitivity;
 
-    return glm::vec2(mouseDeltaX, mouseDeltaY);
+    mouseCoords = glm::vec2(mouseDeltaX, mouseDeltaY);
+}
+
+glm::vec2 MouseWatcher::getMouseCoords() {
+    return mouseCoords;
 }
