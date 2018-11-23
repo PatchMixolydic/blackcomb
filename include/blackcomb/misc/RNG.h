@@ -3,10 +3,10 @@
 
 #include <random>
 
-/**
- * A wrapper for C++'s random number generator featuring a very original interface.
- */
 namespace misc {
+    /**
+     * A wrapper for C++'s random number generator featuring a very original interface.
+     */
     class RNG {
     public:
         RNG();
