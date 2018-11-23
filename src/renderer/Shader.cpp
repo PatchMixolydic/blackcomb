@@ -3,7 +3,7 @@
 #include <sstream>
 #include <assert.h>
 #include "blackcomb/renderer/Shader.h"
-#include "blackcomb/misc/EngineException.h"
+#include "blackcomb/misc/BlackcombException.h"
 
 using namespace renderer;
 
@@ -144,7 +144,7 @@ void Shader::setUniformVecF(const char* name, float* val, size_t size) {
         default:
             char msg[64];
             snprintf(msg, 64, "Can't create a uniform Vec%i", (int)size);
-            throw EngineException(msg);
+            throw BlackcombException(msg);
     }
 }
 

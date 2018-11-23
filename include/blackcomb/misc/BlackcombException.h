@@ -7,9 +7,9 @@
  * A general exception caused by the engine.
  * Allows for a customizable error message.
  */
-class EngineException: public std::exception {
+class BlackcombException: public std::exception {
 public:
-    EngineException(const char* msg);
+    BlackcombException(const char* msg);
     virtual const char* what() const throw();
 private:
     const char* msg;

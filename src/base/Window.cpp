@@ -1,5 +1,5 @@
 #include <iostream>
-#include "blackcomb/misc/EngineException.h"
+#include "blackcomb/misc/BlackcombException.h"
 #include "blackcomb/misc/Coords.h"
 #include "blackcomb/base/Window.h"
 
@@ -18,7 +18,7 @@ namespace blackcombBase {
 
         handle = glfwCreateWindow(width, height, name, nullptr, nullptr);
         if (handle == nullptr) {
-            throw EngineException("Failed to create GLFW window");
+            throw BlackcombException("Failed to create GLFW window");
         }
 
         setFramebufferSizeCallback(defaultSizeCallback);

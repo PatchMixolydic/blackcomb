@@ -1,7 +1,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 #include <iostream>
-#include "blackcomb/misc/EngineException.h"
+#include "blackcomb/misc/BlackcombException.h"
 #include "blackcomb/base/AppBase.h"
 
 namespace blackcombBase {
@@ -15,7 +15,7 @@ namespace blackcombBase {
         getWindow().setInputMode(GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
         if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
-            throw EngineException("Failed to initialize GLAD");
+            throw BlackcombException("Failed to initialize GLAD");
         }
 
         glEnable(GL_DEPTH_TEST);
