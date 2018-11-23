@@ -25,7 +25,7 @@ void Camera::loadViewMatrix(renderer::Shader& shader) {
  * @param shader The @ref Shader to load the projection matrix into.
  * @param window The @ref Window that you want the projection matrix for.
  */
-void Camera::loadProjectionMatrix(renderer::Shader& shader, renderer::Window& window) {
+void Camera::loadProjectionMatrix(renderer::Shader& shader, blackcombBase::Window& window) {
     Point2i winDims = window.getDims();
     glm::mat4 projection = glm::perspective(glm::radians(fov), (float)winDims.x / winDims.y, 0.1f, 100.0f);
     shader.setUniformMat4F("projection", glm::value_ptr(projection));

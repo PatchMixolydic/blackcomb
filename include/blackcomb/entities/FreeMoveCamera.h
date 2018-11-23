@@ -11,7 +11,7 @@ namespace entity {
     class FreeMoveCamera : public Camera {
     public:
         void loadViewMatrix(renderer::Shader& shader) override;
-        void processInput(renderer::Window& window, float deltaTime);
+        void processInput(blackcombBase::Window& window, float deltaTime);
         float speed = 5.0f; ///< The speed at which the camera moves.
     private:
         glm::vec3 front = glm::vec3(0.0f, 0.0f, -1.0f);

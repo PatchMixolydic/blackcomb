@@ -6,7 +6,7 @@
 #include "blackcomb/input/MouseWatcher.h"
 #include "blackcomb/misc/Coords.h"
 
-namespace renderer {
+namespace blackcombBase {
     constexpr unsigned int DefaultWinWidth = 800;
     constexpr unsigned int DefaultWinHeight = 600;
     constexpr char DefaultWinName[] = "Blackcomb Application";

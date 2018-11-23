@@ -30,9 +30,9 @@ AppBase::~AppBase() {
 /**
  * A getter for the window, since the window is lazily generated.
  */
-renderer::Window& AppBase::getWindow() {
+blackcombBase::Window& AppBase::getWindow() {
     if (!window) {
-        window = renderer::Window();
+        window = blackcombBase::Window();
     }
     return window.value();
 }

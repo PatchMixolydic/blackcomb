@@ -11,16 +11,16 @@
  */
 class AppBase {
 public:
-    AppBase(std::string winTitle = renderer::DefaultWinName);
+    AppBase(std::string winTitle = blackcombBase::DefaultWinName);
     ~AppBase();
-    renderer::Window& getWindow();
+    blackcombBase::Window& getWindow();
     virtual void run();
     virtual void update();
     virtual void processInput();
     float deltaTime = 0.0f;
     float lastFrame = static_cast<float>(glfwGetTime());
 private:
-    std::optional<renderer::Window> window;
+    std::optional<blackcombBase::Window> window;
 };
 
 

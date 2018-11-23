@@ -10,7 +10,7 @@ bool MouseWatcher::hasFocus = true;
  * @param window The window to watch for mouse motion in.
  * @return The change in mouse position.
  */
-void MouseWatcher::update(renderer::Window& window) {
+void MouseWatcher::update(blackcombBase::Window& window) {
     if (!hasFocus) {
         mouseCoords = glm::vec2(0, 0);
         return;

@@ -16,7 +16,7 @@ void FreeMoveCamera::loadViewMatrix(renderer::Shader& shader) {
  * @param window The pointer to the window that the mouse should be tracked over.
  * @param deltaTime Time since the last tick.
  */
-void FreeMoveCamera::processInput(renderer::Window& window, float deltaTime) {
+void FreeMoveCamera::processInput(blackcombBase::Window& window, float deltaTime) {
     if (window.getKey(GLFW_KEY_W) == GLFW_PRESS) {
         setPos(pos + speed * deltaTime * front);
     }

@@ -4,7 +4,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
-namespace renderer {
+namespace blackcombBase {
     class Window;
 }
 
@@ -14,7 +14,7 @@ namespace input {
  */
     class MouseWatcher {
     public:
-        void update(renderer::Window& window);
+        void update(blackcombBase::Window& window);
         glm::vec2 getMouseCoords();
         static bool hasFocus; ///< Does the window have focus?
         float mouseSensitivity = 0.05f; ///< Controls the sensitivity of mouse tracking.
