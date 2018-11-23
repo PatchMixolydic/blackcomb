@@ -9,7 +9,7 @@
 namespace renderer {
     constexpr unsigned int DefaultWinWidth = 800;
     constexpr unsigned int DefaultWinHeight = 600;
-    constexpr char DefaultWinName[] = "Blackcomb App";
+    constexpr char DefaultWinName[] = "Blackcomb Application";
 
 /**
  * Object-oriented wrapper for GLFW's window functions.
