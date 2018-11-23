@@ -1,7 +1,9 @@
 #include "blackcomb/misc/BlackcombException.h"
 
-BlackcombException::BlackcombException(const char* msg) : msg(msg) {}
+namespace blackcomb::misc {
+    BlackcombException::BlackcombException(const char* msg) : msg(msg) {}
 
-const char* BlackcombException::what() const throw() {
-    return msg;
+    const char* BlackcombException::what() const throw() {
+        return msg;
+    }
 }

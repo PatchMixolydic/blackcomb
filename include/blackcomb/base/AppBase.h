@@ -6,22 +6,22 @@
 #include <GLFW/glfw3.h>
 #include "Window.h"
 
-namespace blackcombBase {
+namespace blackcomb::base {
     /**
      * A convenient base for any Blackcomb application.
      */
     class AppBase {
     public:
-        AppBase(std::string winTitle = blackcombBase::DefaultWinName);
+        AppBase(std::string winTitle = base::DefaultWinName);
         ~AppBase();
-        blackcombBase::Window& getWindow();
+        base::Window& getWindow();
         virtual void run();
         virtual void update();
         virtual void processInput();
         float deltaTime = 0.0f;
         float lastFrame = static_cast<float>(glfwGetTime());
     private:
-        std::optional<blackcombBase::Window> window;
+        std::optional<base::Window> window;
     };
 }
 

@@ -3,7 +3,7 @@
 #include "blackcomb/misc/Coords.h"
 #include "blackcomb/base/Window.h"
 
-namespace blackcombBase {
+namespace blackcomb::base {
     Window::Window() : Window::Window(DefaultWinWidth, DefaultWinHeight, DefaultWinName) {}
 
     Window::Window(const char* name) : Window::Window(DefaultWinWidth, DefaultWinHeight, name) {}
@@ -18,7 +18,7 @@ namespace blackcombBase {
 
         handle = glfwCreateWindow(width, height, name, nullptr, nullptr);
         if (handle == nullptr) {
-            throw BlackcombException("Failed to create GLFW window");
+            throw misc::BlackcombException("Failed to create GLFW window");
         }
 
         setFramebufferSizeCallback(defaultSizeCallback);
@@ -80,7 +80,7 @@ namespace blackcombBase {
     /**
      * @return The window's width and height.
      */
-    Point2i Window::getDims() {
+    misc::Point2i Window::getDims() {
         int width, height;
         glfwGetWindowSize(handle, &width, &height);
         return {width, height};

@@ -3,7 +3,7 @@
 
 #include <random>
 
-namespace misc {
+namespace blackcomb::misc {
     /**
      * A wrapper for C++'s random number generator featuring a very original interface.
      */

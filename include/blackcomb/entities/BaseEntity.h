@@ -3,7 +3,8 @@
 
 
 #include <glm/glm.hpp>
-namespace entity {
+
+namespace blackcomb::entity {
 /**
  * A generic entity class.
  * Contains functions for setting position, rotation, and scale, as well as supporting a function that is called every tick.

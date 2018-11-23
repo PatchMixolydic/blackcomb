@@ -5,19 +5,19 @@
 #include <vector>
 #include "../misc/Coords.h"
 
-namespace renderer {
-/**
- * Holds the data that describes a vertex: position, colour, and uv coordinate.
- */
+namespace blackcomb::renderer {
+    /**
+     * Holds the data that describes a vertex: position, colour, and uv coordinate.
+     */
     struct Vertex {
-        Point3f pos;
-        Color color;
-        UVCoord uv;
+        misc::Point3f pos;
+        misc::Color color;
+        misc::UVCoord uv;
     };
 
-/**
- * Loads and stores mesh data.
- */
+    /**
+     * Loads and stores mesh data.
+     */
     class Mesh {
     public:
         Mesh(std::vector<GLfloat> modelData, std::vector<GLuint> indices);

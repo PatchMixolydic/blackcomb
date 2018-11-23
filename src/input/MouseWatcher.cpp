@@ -1,41 +1,41 @@
 #include "blackcomb/base/Window.h"
 #include "blackcomb/input/MouseWatcher.h"
 
-using namespace input;
+namespace blackcomb::input {
+    bool MouseWatcher::hasFocus = true;
 
-bool MouseWatcher::hasFocus = true;
+    /**
+     * Update the mouse position.
+     * @param window The window to watch for mouse motion in.
+     * @return The change in mouse position.
+     */
+    void MouseWatcher::update(base::Window& window) {
+        if (!hasFocus) {
+            mouseCoords = glm::vec2(0, 0);
+            return;
+        }
 
-/**
- * Update the mouse position.
- * @param window The window to watch for mouse motion in.
- * @return The change in mouse position.
- */
-void MouseWatcher::update(blackcombBase::Window& window) {
-    if (!hasFocus) {
-        mouseCoords = glm::vec2(0, 0);
-        return;
-    }
+        double mouseX, mouseY;
+        glfwGetCursorPos(window.getHandle(), &mouseX, &mouseY);
 
-    double mouseX, mouseY;
-    glfwGetCursorPos(window.getHandle(), &mouseX, &mouseY);
+        if (mouseUnseen) {
+            lastMouseX = mouseX;
+            lastMouseY = mouseY;
+            mouseUnseen = false;
+        }
 
-    if (mouseUnseen) {
+        double mouseDeltaX = mouseX - lastMouseX;
+        double mouseDeltaY = lastMouseY - mouseY;
         lastMouseX = mouseX;
         lastMouseY = mouseY;
-        mouseUnseen = false;
+
+        mouseDeltaX *= mouseSensitivity;
+        mouseDeltaY *= mouseSensitivity;
+
+        mouseCoords = glm::vec2(mouseDeltaX, mouseDeltaY);
     }
 
-    double mouseDeltaX = mouseX - lastMouseX;
-    double mouseDeltaY = lastMouseY - mouseY;
-    lastMouseX = mouseX;
-    lastMouseY = mouseY;
-
-    mouseDeltaX *= mouseSensitivity;
-    mouseDeltaY *= mouseSensitivity;
-
-    mouseCoords = glm::vec2(mouseDeltaX, mouseDeltaY);
-}
-
-glm::vec2 MouseWatcher::getMouseCoords() {
-    return mouseCoords;
+    glm::vec2 MouseWatcher::getMouseCoords() {
+        return mouseCoords;
+    }
 }

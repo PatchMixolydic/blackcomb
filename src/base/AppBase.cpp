@@ -4,7 +4,7 @@
 #include "blackcomb/misc/BlackcombException.h"
 #include "blackcomb/base/AppBase.h"
 
-namespace blackcombBase {
+namespace blackcomb::base {
     AppBase::AppBase(std::string winTitle) {
         stbi_set_flip_vertically_on_load(true);
         glfwInit();
@@ -15,7 +15,7 @@ namespace blackcombBase {
         getWindow().setInputMode(GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
         if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
-            throw BlackcombException("Failed to initialize GLAD");
+            throw misc::BlackcombException("Failed to initialize GLAD");
         }
 
         glEnable(GL_DEPTH_TEST);
@@ -31,9 +31,9 @@ namespace blackcombBase {
     /**
      * A getter for the window, since the window is lazily generated.
      */
-    blackcombBase::Window& AppBase::getWindow() {
+    base::Window& AppBase::getWindow() {
         if (!window) {
-            window = blackcombBase::Window();
+            window = base::Window();
         }
         return window.value();
     }

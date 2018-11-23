@@ -5,7 +5,7 @@
 #include "Texture.h"
 #include "../misc/Coords.h"
 
-namespace renderer {
+namespace blackcomb::renderer {
 /**
  * Handles looking up textures within a texture atlas.
  */
@@ -13,7 +13,7 @@ namespace renderer {
     public:
         TextureAtlas(const std::string& textureFilename, int textureWidth, int textureHeight);
         Texture getTexture();
-        UVRect getCoordsForTexture(int texture);
+        misc::UVRect getCoordsForTexture(int texture);
 
     private:
         Texture atlas;

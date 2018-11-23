@@ -10,7 +10,7 @@
  *  Contains the [Shader](@ref Shader) class and some helpful shader-related utilities.
  */
 
-namespace renderer {
+namespace blackcomb::renderer {
     /**
      * A mapping of OpenGL shader type constants to human-readable names.
      * Key 0 is used for a default name in case the actual shader name is unknown.

@@ -6,7 +6,7 @@
 #include "blackcomb/input/MouseWatcher.h"
 #include "blackcomb/misc/Coords.h"
 
-namespace blackcombBase {
+namespace blackcomb::base {
     constexpr unsigned int DefaultWinWidth = 800;
     constexpr unsigned int DefaultWinHeight = 600;
     constexpr char DefaultWinName[] = "Blackcomb Application";
@@ -27,7 +27,7 @@ namespace blackcombBase {
         int getMouseButton(int button);
         void makeContextCurrent();
         GLFWwindow* getHandle();
-        Point2i getDims();
+        misc::Point2i getDims();
         void setFramebufferSizeCallback(GLFWframebuffersizefun fbSizeCallback);
         static void defaultSizeCallback(GLFWwindow* handle, int width, int height);
         void setWindowTitle(const std::string& title);
