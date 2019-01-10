@@ -19,6 +19,10 @@ namespace blackcomb::entity {
         setPos(glm::vec3(x, y, z));
     }
 
+    glm::vec3 BaseEntity::getPos() {
+        return pos;
+    }
+
     /**
      * Set the X position of the entity.
      */
