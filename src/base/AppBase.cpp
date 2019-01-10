@@ -1,6 +1,8 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 #include <iostream>
+#include <blackcomb/base/AppBase.h>
+
 #include "blackcomb/misc/BlackcombException.h"
 #include "blackcomb/base/AppBase.h"
 
@@ -24,6 +26,7 @@ namespace blackcomb::base {
     }
 
     AppBase::~AppBase() {
+        destroy();
         glfwTerminate();
     }
 
@@ -49,8 +52,9 @@ namespace blackcomb::base {
             lastFrame = now;
             processInput();
             getWindow().mouseWatcher.update(getWindow());
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+            updatePreClear();
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             update();
 
             glfwSwapBuffers(getWindow().getHandle());
@@ -60,12 +64,22 @@ namespace blackcomb::base {
     }
 
     /**
-     * Called once per frame after run() is called.
+     * Called once per frame after run() is called, after calling glClear.
+     * For updating before glClear, use updatePreClear.
      */
     void AppBase::update() {}
+    /**
+     * Called once per frame after run() is called, before calling glClear.
+     */
+    void AppBase::updatePreClear() {}
 
     /**
      * Input handling code. Run once per frame after run() is called.
      */
     void AppBase::processInput() {}
+
+    /**
+     * Called when the application is closing. Libraries should probably be cleaned up here.
+     */
+    void AppBase::destroy() {}
 }

@@ -16,8 +16,10 @@ namespace blackcomb::base {
         ~AppBase();
         base::Window& getWindow();
         virtual void run();
+        virtual void updatePreClear();
         virtual void update();
         virtual void processInput();
+        virtual void destroy();
         float deltaTime = 0.0f;
         float lastFrame = static_cast<float>(glfwGetTime());
     private:
