@@ -2,7 +2,7 @@
 #include "blackcomb/input/MouseWatcher.h"
 
 namespace blackcomb::input {
-    bool MouseWatcher::hasFocus = true;
+    bool MouseWatcher::shouldWatch = false;
 
     /**
      * Update the mouse position.
@@ -10,7 +10,7 @@ namespace blackcomb::input {
      * @return The change in mouse position.
      */
     void MouseWatcher::update(base::Window& window) {
-        if (!hasFocus) {
+        if (!shouldWatch) {
             mouseCoords = glm::vec2(0, 0);
             return;
         }

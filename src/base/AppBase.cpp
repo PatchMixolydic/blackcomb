@@ -12,7 +12,6 @@ namespace blackcomb::base {
         getWindow().hide();
         getWindow().setWindowTitle(winTitle);
         getWindow().makeContextCurrent();
-        getWindow().setInputMode(GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
         if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
             throw misc::BlackcombException("Failed to initialize GLAD");

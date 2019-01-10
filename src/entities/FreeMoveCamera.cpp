@@ -29,7 +29,7 @@ namespace blackcomb::entity {
             setPos(pos + glm::normalize(glm::cross(front, up)) * speed * deltaTime);
         }
 
-        if (!input::MouseWatcher::hasFocus) return;
+        if (!input::MouseWatcher::shouldWatch) return;
 
         glm::vec2 mouseDelta = window.mouseWatcher.getMouseCoords();
 

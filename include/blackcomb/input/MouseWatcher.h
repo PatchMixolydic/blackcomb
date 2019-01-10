@@ -16,7 +16,7 @@ namespace blackcomb::input {
     public:
         void update(base::Window& window);
         glm::vec2 getMouseCoords();
-        static bool hasFocus; ///< Does the window have focus?
+        static bool shouldWatch; ///< Should we be watching for mouse input?
         float mouseSensitivity = 0.05f; ///< Controls the sensitivity of mouse tracking.
     private:
         double lastMouseX = 400, lastMouseY = 300;
