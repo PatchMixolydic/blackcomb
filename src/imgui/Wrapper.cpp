@@ -33,7 +33,7 @@ namespace blackcomb::imgui {
     }
 
     /**
-     * Initialize the imgui context and bindings. Call after createContext and after configuring ImGui
+     * Initialize the ImGui context and bindings. Call after createContext and after configuring ImGui
      * @param windowPtr The handle of the window to draw to
      * @param glslVersion The GLSL version, defined as in a shader file (ie. "#version 150"), or nullptr for imgui's default.
      * @param installCallbacks Whether or not imgui should register its callbacks with OpenGL.
@@ -46,7 +46,7 @@ namespace blackcomb::imgui {
 
     /**
      * Should be called each frame you are drawing an imgui object, before rendering anything.
-     * Informs imgui that a new frame has begun.
+     * Informs ImGui that a new frame has begun.
      */
     void Wrapper::beginFrame() {
         // Start the Dear ImGui frame
@@ -56,7 +56,7 @@ namespace blackcomb::imgui {
     }
 
     /**
-     * Should be called when you are done drawing all of your imgui objects.
+     * Should be called when you are done drawing all of your ImGui objects.
      * Draws the UI to the screen.
      */
     void Wrapper::render() {
@@ -75,7 +75,7 @@ namespace blackcomb::imgui {
     }
 
     /**
-     * Should be called when you are done with imgui, probably in AppBase::destroy.
+     * Should be called when you are done with ImGui, probably in AppBase::destroy.
      */
     void Wrapper::destroy() {
         ImGui_ImplOpenGL3_Shutdown();

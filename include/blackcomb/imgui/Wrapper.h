@@ -7,9 +7,9 @@
 
 namespace blackcomb::imgui {
     /**
-     * A conveniece wrapper for Dear IMGUI's initialization and destruction.
+     * A conveniece wrapper for Dear ImGui's initialization and destruction.
      *
-     * For additional documentation on Dear IMGUI, see https://github.com/ocornut/imgui/wiki.
+     * For additional documentation on Dear ImGui, see https://github.com/ocornut/imgui/wiki.
      */
     class Wrapper {
     public:
