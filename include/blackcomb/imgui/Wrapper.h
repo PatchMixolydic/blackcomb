@@ -13,6 +13,8 @@ namespace blackcomb::imgui {
      */
     class Wrapper {
     public:
+        static void createContext();
+        static void simpleConfig();
         static void initialize(GLFWwindow* windowPtr, const char* glslVersion = nullptr, bool installCallbacks = true);
         static void beginFrame();
         static void render();
